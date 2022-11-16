@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background: #f1f1f1;
+  top:0px;
+  left:0px;
+}
+
+/* 设置外层框体 */
+#frame{
+    top:0px;
+    left:0px;
+}
+
+/* 设置上导航栏的样式 */
+#nav {
+  overflow: visible;
+  background-color: #930;
+  position:fixed;
+  top:0;
+  left:0;
+  height:52px;
+  width:100%;
+}
+
+/* 设置 topnav 链接的样式 */
+#nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* 改变鼠标悬停时的颜色 */
+#nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/* 右列 */
+#content {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+
+
+
+/* 清除列之后的浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 页脚 */
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  text-align: center;
+  background: #930;
+  margin-top: 20px;
+  width:100%;
+  color: yellow;
+}
+
+/* 响应式布局 - 当屏幕的宽度小于 800 像素时，使两列堆叠而不是并排 */
+@media screen and (max-width: 800px) {
+  #content {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* 响应式布局 - 当屏幕的宽度小于 400 像素时，使导航链接堆叠而不是并排 */
+@media screen and (max-width: 400px) {
+  #nav a {
+    float: none;
+    width: 100%;
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block header %}
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}-woniurobot</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='base.css')}}">
+    {% endblock %}
+</head>
+<body>
+<div id="frame">
+    <div id="nav">
+        {% include 'nav.html' %}
+    </div>
+    <div id="content">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    <div id="footer">
+        &copy;Right to http://www.woniuxy.com by humh
+    </div>
+</div>
+
+</body>
+</html>
